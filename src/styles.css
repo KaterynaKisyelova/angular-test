@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --default-color: hsl(0, 0%, 50%);
+  --bg-color: hsla(208, 20%, 97%);
+  --easy-l-color: hsl(0, 100%, 50%);
+  --medium-l-color: hsl(64, 100%, 50%);
+  --strong-l-color: hsl(120, 100%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+}

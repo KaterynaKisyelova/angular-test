@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup" [class]="'form'">
+  <input
+    type="text"
+    [class]="'password-input'"
+    name="password"
+    formControlName="password"
+    #pass
+    (keyup)="onInputKeyUp(pass.value)"
+  />
+</form>

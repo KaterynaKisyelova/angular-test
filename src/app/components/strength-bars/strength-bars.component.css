@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  position: relative;
+  width: 10rem;
+  margin: 1rem auto 0 auto;
+  justify-content: center;
+  background-color: var(--default-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: -3;
+}
+
+.strength-meter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+}
+
+.bar {
+  height: 0.5rem;
+  background-color: transparent;
+  border: 0.1rem solid var(--bg-color);
+}
+
+.invalid {
+  background-color: var(--easy-l-color);
+  width: 100%;
+  z-index: -2;
+}
+
+.easy {
+  background-color: var(--easy-l-color);
+  width: 33%;
+  z-index: -2;
+}
+
+.medium {
+  background-color: var(--medium-l-color);
+  width: 66%;
+  z-index: -2;
+}
+
+.strong {
+  background-color: var(--strong-l-color);
+  width: 100%;
+  z-index: -2;
+}

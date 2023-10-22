@@ -1,0 +1,14 @@
+<div [class]="'container'">
+  <div [class]="'bar'"></div>
+  <div [class]="'bar'"></div>
+  <div [class]="'bar'"></div>
+  <div
+    [ngClass]="{
+      'strength-meter': true,
+      invalid: passwordSafety === SafetyLevels.INVALID,
+      easy: passwordSafety === SafetyLevels.EASY,
+      medium: passwordSafety === SafetyLevels.MEDIUM,
+      strong: passwordSafety === SafetyLevels.STRONG
+    }"
+  ></div>
+</div>

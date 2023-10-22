@@ -1,0 +1,9 @@
+.form {
+  margin: 12rem 0 0 0;
+  width: 100%;
+}
+.password-input {
+  line-height: 2rem;
+  width: 100%;
+  padding: 0 0.4rem;
+}
