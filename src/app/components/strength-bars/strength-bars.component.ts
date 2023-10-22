@@ -20,17 +20,16 @@ export class StrengthBarComponent implements OnChanges {
     const status = changes['inputValue'].currentValue.status as string;
     const password = changes['inputValue'].currentValue.value as string;
 
-    if (password.length === 0) {
-      this.passwordSafety = '';
-      return;
+    switch (true) {
+      case password.length === 0:
+        this.passwordSafety = '';
+        break;
+      case status === SafetyLevels.INVALID:
+        this.passwordSafety = SafetyLevels.INVALID;
+        break;
+      default:
+        this.passwordSafety = checkPasswordSafety(password);
     }
-
-    if (status === SafetyLevels.INVALID) {
-      this.passwordSafety = SafetyLevels.INVALID;
-      return;
-    }
-
-    this.passwordSafety = checkPasswordSafety(password);
   }
 
   get SafetyLevels() {
